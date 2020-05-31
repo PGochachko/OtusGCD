@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oTn-N4-Kpa" customClass="DispatchView" customModule="DataStructuresProfiling" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-aw-3ra">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ifd-oq-Rf8">
+                    <rect key="frame" x="204" y="40.5" width="196" height="31"/>
+                    <connections>
+                        <action selector="sliderAdjusted:" destination="-2" eventType="valueChanged" id="ZaU-VS-FXP"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тест на создание 10 000 элементов " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3Z-5v-3vY">
+                    <rect key="frame" x="16" y="16" width="293" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUc-qd-ikQ">
+                    <rect key="frame" x="365" y="10" width="33" height="33"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <state key="normal" title="Run"/>
+                    <connections>
+                        <action selector="runButtonTouched:" destination="-2" eventType="touchUpInside" id="qdT-fd-yiu"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество тестов: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdo-Lb-4Ug">
+                    <rect key="frame" x="16" y="45" width="178" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество потоков: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8X-fA-02a">
+                    <rect key="frame" x="16" y="73.5" width="179" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="czN-bK-c5J">
+                    <rect key="frame" x="304" y="68" width="94" height="32"/>
+                    <connections>
+                        <action selector="stepperChanged:" destination="-1" eventType="valueChanged" id="s4n-HJ-ZF5"/>
+                    </connections>
+                </stepper>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Z3Z-5v-3vY" firstAttribute="leading" secondItem="oTn-N4-Kpa" secondAttribute="leading" constant="16" id="0Ur-xz-ew6"/>
+                <constraint firstItem="ifd-oq-Rf8" firstAttribute="centerY" secondItem="sdo-Lb-4Ug" secondAttribute="centerY" id="2zn-kg-fZi"/>
+                <constraint firstItem="czN-bK-c5J" firstAttribute="trailing" secondItem="ifd-oq-Rf8" secondAttribute="trailing" id="7v6-dJ-a9E"/>
+                <constraint firstItem="fvp-aw-3ra" firstAttribute="top" secondItem="oTn-N4-Kpa" secondAttribute="top" id="BOP-2d-8gz"/>
+                <constraint firstItem="ifd-oq-Rf8" firstAttribute="leading" secondItem="sdo-Lb-4Ug" secondAttribute="trailing" constant="12" id="Tdz-c1-1iX"/>
+                <constraint firstItem="ifd-oq-Rf8" firstAttribute="trailing" secondItem="eUc-qd-ikQ" secondAttribute="trailing" id="Tng-z8-Pld"/>
+                <constraint firstItem="sdo-Lb-4Ug" firstAttribute="leading" secondItem="Z3Z-5v-3vY" secondAttribute="leading" id="U7M-RG-WI8"/>
+                <constraint firstItem="czN-bK-c5J" firstAttribute="centerY" secondItem="B8X-fA-02a" secondAttribute="centerY" id="Y8j-e9-vaf"/>
+                <constraint firstItem="fvp-aw-3ra" firstAttribute="centerY" secondItem="oTn-N4-Kpa" secondAttribute="centerY" id="ZX3-Ia-b3n"/>
+                <constraint firstItem="Z3Z-5v-3vY" firstAttribute="top" secondItem="oTn-N4-Kpa" secondAttribute="top" constant="16" id="bNq-iy-DgV"/>
+                <constraint firstAttribute="trailing" secondItem="eUc-qd-ikQ" secondAttribute="trailing" constant="16" id="d3e-G7-tov"/>
+                <constraint firstItem="sdo-Lb-4Ug" firstAttribute="top" secondItem="Z3Z-5v-3vY" secondAttribute="bottom" constant="8" id="gBv-EN-Q8m"/>
+                <constraint firstItem="fvp-aw-3ra" firstAttribute="leading" secondItem="oTn-N4-Kpa" secondAttribute="leading" id="gFA-5Z-QdD"/>
+                <constraint firstItem="B8X-fA-02a" firstAttribute="top" secondItem="sdo-Lb-4Ug" secondAttribute="bottom" constant="8" id="hlR-NU-MMY"/>
+                <constraint firstItem="B8X-fA-02a" firstAttribute="leading" secondItem="sdo-Lb-4Ug" secondAttribute="leading" id="iwV-K1-lu1"/>
+                <constraint firstItem="fvp-aw-3ra" firstAttribute="centerX" secondItem="oTn-N4-Kpa" secondAttribute="centerX" id="vkB-8i-s94"/>
+                <constraint firstItem="eUc-qd-ikQ" firstAttribute="centerY" secondItem="Z3Z-5v-3vY" secondAttribute="centerY" id="xf7-nF-Bpm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="countTestLabel" destination="sdo-Lb-4Ug" id="Q7z-n0-Bzg"/>
+                <outlet property="countThreadsLabel" destination="B8X-fA-02a" id="x5e-cT-Sbx"/>
+                <outlet property="runButton" destination="eUc-qd-ikQ" id="IMY-WN-4rm"/>
+            </connections>
+            <point key="canvasLocation" x="350.72463768115944" y="-777.79017857142856"/>
+        </view>
+    </objects>
+</document>
